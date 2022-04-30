@@ -34,8 +34,8 @@ contract NFT is ERC721, Ownable {
         if (newTokenId > TOTAL_SUPPLY) {
             revert MaxSupply();
         }
-        _safeMint(recipient, newItemId);
-        return newItemId;
+        _safeMint(recipient, newTokenId);
+        return newTokenId;
     }
 
     function tokenURI(uint256 tokenId) public view virtual override returns(string memory) {
